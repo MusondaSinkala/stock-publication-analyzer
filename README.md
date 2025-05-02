@@ -34,15 +34,15 @@ git clone https://github.com/MusondaSinkala/stock-publication-analyzer.git
 
 ### 2. Build & Run the Docker Container
 
-docker build -t literature-trends-app .
+docker build -t literature-trends-app .<br>
 docker run -p 8501:8501 literature-trends-app
 
 Then open your browser to http://localhost:8501
 
 ### (Alternative) Run Locally without Docker
 
-pip install -r requirements.txt
-cd app
+pip install -r requirements.txt<br>
+cd app<br>
 streamlit run app/app.py
 
 ---
@@ -51,14 +51,13 @@ streamlit run app/app.py
 
 - Trend comparison between weekly paper counts and sector ETF performance
 - Correlation analysis (Pearson)
-- Ready for extensions (e.g., Granger causality, LSTM modeling)
-- Streamlit web UI
+- Regression modelling
+- Streamlit web UI (accessible at https://publicationstocktracker.streamlit.app/)
 
 ## Limitations
 
-- Scientific paper counts are noisy and do not account for impact or quality
-- No lag analysis or modeling yet — correlations may not indicate causality
-- Paper metadata sometimes lacks consistent timestamps
+- OpenAlex rate limits and data granularity slow down analysis.
+- Research activity may correlate with ETF movements but not cause them. Other features may be needed to determine causes of stock price movements.
 
 ## Folder Structure
 ```
@@ -77,6 +76,5 @@ literature-stock-trends/
 ```
 
 ## Author
-Musonda Sinkala
-
+Musonda Sinkala<br>
 mks9887@nyu.edu
