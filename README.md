@@ -1,4 +1,4 @@
-# 📊 Scientific Literature & Sector Stock Trend Analysis
+# Scientific Literature & Sector Stock Trend Analysis
 
 This project explores the relationship between trends in scientific publication activity and short-term stock market performance in related sectors.
 
@@ -14,7 +14,7 @@ We aim to answer:
 
 ## Data Sources
 
-- **Scientific Literature**: [Semantic Scholar API](https://api.semanticscholar.org/)  
+- **Scientific Literature**: [Open Alex]([https://api.semanticscholar.org/](https://openalex.org/))  
   - Paper metadata including titles, abstracts, and publication dates.
 - **Stock Market Sector Data**: [Yahoo Finance via `yfinance`](https://pypi.org/project/yfinance/)  
   - Sector ETFs like:
@@ -29,8 +29,7 @@ We aim to answer:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/literature-stock-trends.git
-cd literature-stock-trends
+git clone https://github.com/MusondaSinkala/stock-publication-analyzer.git
 ```
 
 ### 2. Build & Run the Docker Container
@@ -44,7 +43,7 @@ Then open your browser to http://localhost:8501
 
 pip install -r requirements.txt
 cd app
-streamlit run app.py
+streamlit run app/app.py
 
 ---
 
@@ -62,7 +61,7 @@ streamlit run app.py
 - Paper metadata sometimes lacks consistent timestamps
 
 ## Folder Structure
-
+```
 literature-stock-trends/
 ├── app/
 │   ├── app.py                  # Streamlit web app
@@ -75,7 +74,9 @@ literature-stock-trends/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
+```
 
 ## Author
 Musonda Sinkala
+
 mks9887@nyu.edu
